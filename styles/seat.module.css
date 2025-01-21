@@ -1,0 +1,58 @@
+.grid {
+  display: grid;
+  grid-template-columns: 0fr  2fr 0fr 0fr; /* Sol (2 koltuk), koridor (boş), sağ (2 koltuk) */
+  gap: 10px;
+  width: 100%;
+  width: 150px; /* Daha geniş tasarım */
+  margin: auto;
+  margin-top: 20px;
+}
+  
+.seat {
+    width: 20px;
+    height: 20px;
+    background-color: lightgray;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+  
+.occupied {
+  background-color: red;
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.tooltipContainer {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translate(-50%, -10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  top: 60px;
+  left: 50%;
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.tooltipContainer:hover .tooltip {
+  opacity: 1;
+  transform: translate(-50%, -20px);
+}
