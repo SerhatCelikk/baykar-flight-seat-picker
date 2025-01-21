@@ -1,3 +1,6 @@
+.seatGridContainer {
+  @apply w-full flex flex-col gap-4 relative;
+}
 .grid {
   display: grid;
   grid-template-columns: 0fr  2fr 0fr 0fr; /* Sol (2 koltuk), koridor (boş), sağ (2 koltuk) */
@@ -11,7 +14,7 @@
 .seat {
     width: 20px;
     height: 20px;
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
@@ -22,16 +25,15 @@
 }
   
 .occupied {
-  background-color: red;
-  cursor: not-allowed;
+  @apply bg-[#d3d3d3] cursor-not-allowed;
 }
 
 .selected {
-  background-color: yellow;
+  @apply bg-[#FFFF00]
 }
 
 .tooltipContainer {
-  position: relative;
+  @apply relative;
 }
 
 .tooltip {
@@ -50,9 +52,17 @@
   pointer-events: none;
   z-index: 10;
   white-space: nowrap;
+
 }
 
 .tooltipContainer:hover .tooltip {
   opacity: 1;
   transform: translate(-50%, -20px);
+}
+
+.seatInfo {
+  @apply flex justify-center mt-12 gap-4;
+}
+.seatInfoItem {
+  @apply flex flex-col items-center gap-2;
 }

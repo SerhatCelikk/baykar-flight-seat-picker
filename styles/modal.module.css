@@ -3,7 +3,7 @@
 }
 
 .modal {
-  @apply bg-white rounded-lg shadow-lg w-96 p-6;
+  @apply bg-gray-200 rounded-lg shadow-lg w-96 p-6;
 }
 
 /* Status renkleri */

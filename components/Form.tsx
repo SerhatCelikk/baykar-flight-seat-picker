@@ -158,8 +158,12 @@ const Form: React.FC<FormProps> = ({ selectedSeats, pricePerSeat }) => {
               className={styles.passengerHeader}
               onClick={() => handleToggle(data.seat)}
             >
-              <span>{index + 1}. Yolcu (Koltuk: {data.seat})</span>
-              <span>{expandedForms[data.seat] ? '▼' : '▶'}</span>
+              <p>
+                <span>{index + 1}. Yolcu (Koltuk: {data.seat})</span>
+              </p>
+              <div className='mt-1 w-4 h-4'>
+                {expandedForms[data.seat] ? <img src="right.svg" className=' rotate-90' alt='right arrow'/> : <img src="right.svg" alt='right arrow'/>}
+              </div>
             </div>
             {expandedForms[data.seat] && (
               <div className="grid grid-cols-2 gap-4">

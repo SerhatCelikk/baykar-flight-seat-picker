@@ -1,0 +1,26 @@
+.summaryContainer {
+    @apply flex w-full justify-center;
+}
+.summaryBox {
+    @apply flex justify-between w-full items-center bg-gray-300 p-4 shadow-md;
+  }
+  
+  .seatsContainer {
+    @apply flex gap-2;
+  }
+  
+  .seatBox {
+    @apply bg-[#FFFF00] text-black font-semibold px-3 py-1 rounded-md text-sm min-h-4 min-w-4;
+  }
+  
+  .priceContainer {
+    @apply flex flex-col items-center gap-2 font-semibold text-gray-800;
+  }
+  .priceUpperSide {
+    @apply flex items-center gap-2;
+  }
+  
+  .totalPrice {
+    @apply text-lg text-black font-bold;
+  }
+  

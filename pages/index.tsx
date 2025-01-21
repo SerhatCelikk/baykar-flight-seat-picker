@@ -8,7 +8,7 @@ const IndexPage: React.FC = () => {
   const [selectedSeats, setSelectedSeats] = useState<number[]>([]);
 
   return (
-    <div className='w-full flex mx-auto max-md:flex-wrap justify-center'>
+    <div className='w-full flex mx-auto max-md:flex-wrap justify-center container'>
       <SeatsGrid selectedSeats={selectedSeats} setSelectedSeats={setSelectedSeats}/>
       <div className='w-full flex flex-col gap-4'>
         <Form 
