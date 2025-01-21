@@ -18,13 +18,12 @@ const Seat: React.FC<SeatProps> = ({ number, status, userName, onSelect }) => {
   return (
     <div className={styles.tooltipContainer}>
       <div
-        className={`${styles.seat} ${
-          status === 'dolu'
+        className={`${styles.seat} ${status === 'dolu'
             ? styles.occupied
             : status === 'secilen'
-            ? styles.selected
-            : ''
-        }`}
+              ? styles.selected
+              : ''
+          }`}
         onClick={handleClick}
       >
         {/* {number} */}

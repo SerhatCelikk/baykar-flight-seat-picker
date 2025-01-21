@@ -152,7 +152,7 @@ const Form: React.FC<FormProps> = ({ selectedSeats, pricePerSeat }) => {
   return (
     <div className={styles.form}>
       <form onSubmit={handleSubmit}>
-      {formData.map((data, index) => (
+        {formData.map((data, index) => (
           <div key={data.seat} className={styles.passengerContainer}>
             <div
               className={styles.passengerHeader}
@@ -162,7 +162,7 @@ const Form: React.FC<FormProps> = ({ selectedSeats, pricePerSeat }) => {
                 <span>{index + 1}. Yolcu (Koltuk: {data.seat})</span>
               </p>
               <div className='mt-1 w-4 h-4'>
-                {expandedForms[data.seat] ? <img src="right.svg" className=' rotate-90' alt='right arrow'/> : <img src="right.svg" alt='right arrow'/>}
+                {expandedForms[data.seat] ? <img src="right.svg" className=' rotate-90' alt='right arrow' /> : <img src="right.svg" alt='right arrow' />}
               </div>
             </div>
             {expandedForms[data.seat] && (

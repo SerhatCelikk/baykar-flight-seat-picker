@@ -75,9 +75,9 @@ const SeatsGrid: React.FC<SeatsGridProps> = ({
     if (isClient) {
       axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
         setUsers(response.data.map((user: UserType) => ({
-                  id: user.id,
-                  name: user.name,
-                })));
+          id: user.id,
+          name: user.name,
+        })));
       });
     }
   }, [isClient]);
