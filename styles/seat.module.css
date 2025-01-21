@@ -1,5 +1,5 @@
 .seatGridContainer {
-  @apply w-full flex flex-col gap-4 relative;
+  @apply w-full flex-col gap-4 relative;
 }
 .grid {
   display: grid;
